@@ -1,0 +1,31 @@
+{
+  "name": "trainingnodejs",
+  "version": "1.0.0",
+  "description": "``` something ```",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nguyenphucminh/TrainingNodeJS.git"
+  },
+  "keywords": [
+    "nodejs",
+    "trainingnode",
+    "coursesNodejs"
+  ],
+  "author": "phucminh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nguyenphucminh/TrainingNodeJS/issues"
+  },
+  "homepage": "https://github.com/nguyenphucminh/TrainingNodeJS#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
