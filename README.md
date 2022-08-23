@@ -43,4 +43,11 @@ add watch node-sass into package (node-sass <input> [output])
 
 ## NOTE:
 GET: server -> client
+
 POST: client -> server
+
+## FORMAT CODE:
+```
+npm i prettier lint-staged husky --save-dev
+
+```
