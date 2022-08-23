@@ -4,7 +4,7 @@
   "description": "``` something ```",
   "main": "src/index.js",
   "scripts": {
-    "beautiful":"lint-staged",
+    "beautiful": "lint-staged",
     "start": "nodemon --inspect src/index.js",
     "watch": "node-sass --watch src/resources/scss/app.scss src/public/css/app.css",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,17 +24,18 @@
     "url": "https://github.com/nguyenphucminh/TrainingNodeJS/issues"
   },
   "homepage": "https://github.com/nguyenphucminh/TrainingNodeJS#readme",
-  "lint-staged":{
-    "src/**/*.{js,json,scss}":"prettier --single-quote --trailing-comma all --tab-width 4 --write"
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
   },
-  "husky":{
-    "hooks":{
-      "pre-commit":"lint-staged"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
   },
   "dependencies": {
     "express": "^4.18.1",
-    "express-handlebars": "^6.0.6"
+    "express-handlebars": "^6.0.6",
+    "mongoose": "^6.5.2"
   },
   "devDependencies": {
     "husky": "^8.0.1",

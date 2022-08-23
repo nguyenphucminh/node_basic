@@ -51,3 +51,8 @@ POST: client -> server
 npm i prettier lint-staged husky --save-dev
 
 ```
+# INSTALL MONGOOSE:
+Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Mongoose supports both promises and callbacks.
+```
+npm install mongoose
+```
