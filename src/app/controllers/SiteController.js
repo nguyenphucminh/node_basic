@@ -1,8 +1,17 @@
+const Course = require('../module/Courses')
 class SiteController{
 
     // [GET] / news
     index(req, res){
-        res.render('home');
+        // res.render('home');
+        Course.find({}, function (err, courses){
+            if(!err){
+                res.json(courses);
+            }
+            else{
+                res.status(400).json({err: "ERROR!"})
+            }
+        })
     }
 
     // [GET] / news/:slug
