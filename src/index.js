@@ -5,7 +5,8 @@ const app = express()
 const port = 3000
 const path = require('path')
 
-//STATIC 
+const route = require('./routes')
+//STATIC PUBLIC FILE
 app.use(express.static(path.join(__dirname, 'public')))
 
 //HTTP logger
@@ -19,13 +20,25 @@ app.set('view engine', 'hbs');
 app.set("views", path.join(__dirname, 'resources', 'views'));
 
 //PATH
+
 app.get('/', (req, res) => {
     res.render('home');
 });
 app.get('/news', (req, res) => {
   res.render('news');
 });
+app.get('/search', (req, res) => {
+  res.render('search');
+});
+app.post('/search', (req, res) => {
+  res.send('');
+});
 
+//CAN USE FORM DATA(BODY)
+app.use(express.urlencoded({
+  extended: true
+}))
+app.use(express.json())
 //PORT
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
