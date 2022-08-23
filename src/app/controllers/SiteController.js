@@ -1,15 +1,15 @@
-class NewsController{
+class SiteController{
 
     // [GET] / news
     index(req, res){
-        res.render('news');
+        res.render('home');
     }
 
     // [GET] / news/:slug
-    show(req, res) {
-        res.send('NEW DETAIL')
+    search(req, res) {
+        res.render('search')
     }
 }
-module.exports = new NewsController;
+module.exports = new SiteController;
 // Create an element to export
 // To Import this element: const newController = require('./NewsController')
