@@ -40,7 +40,10 @@ add watch node-sass into package (node-sass <input> [output])
 ```
 "watch": "node-sass --watch src/resources/scss/app.scss -output src/public/css/app.css"
 ```
-
+plugin slug mongoose
+```
+npm i mongoose-slug-generator --save
+```
 ## NOTE:
 GET: server -> client
 
