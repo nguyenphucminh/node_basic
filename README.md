@@ -44,11 +44,15 @@ plugin slug mongoose
 ```
 npm i mongoose-slug-generator --save
 ```
+config header
+```
+npm i method-override
+```
 ## NOTE:
 GET: server -> client
-
 POST: client -> server
-
+PUT,PATCH: update data
+DELETE: delete data
 ## FORMAT CODE:
 ```
 npm i prettier lint-staged husky --save-dev

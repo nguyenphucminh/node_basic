@@ -166,3 +166,8 @@
 .imgBlog {
   width: 100%;
   height: 400px; }
+
+.dropdown-menu {
+  background-color: #26272b;
+  border: white solid 1px;
+  margin-left: -77px; }

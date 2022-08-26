@@ -1,5 +1,4 @@
 const Course = require('../module/Courses')
-var bodyParser = require('body-parser')
 const { mongooseToObject} = require('../../util/mongoose');
 class CourseController{
 
@@ -25,6 +24,19 @@ class CourseController{
         course.save()
             .then(()=>{res.redirect('/')})
             .catch(()=>{})
+    }
+
+    edit(req, res, next) {
+        Course.findById(req.params.id)
+            .then(courses => res.render('courses/edit',{courses: mongooseToObject(courses)}))
+            .catch(next)
+    }
+
+    //[PUT] /courses/:id
+    update(req, res, next) {
+        Course.updateOne({_id: req.params.id}, req.body)
+            .then(()=> res.redirect('/me/stored/courses'))
+            .catch(next)
     }
 }
 module.exports = new CourseController();
