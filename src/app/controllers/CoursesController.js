@@ -25,7 +25,7 @@ class CourseController{
             .then(()=>{res.redirect('/')})
             .catch(()=>{})
     }
-
+    //[POST] /courses/store
     edit(req, res, next) {
         Course.findById(req.params.id)
             .then(courses => res.render('courses/edit',{courses: mongooseToObject(courses)}))
@@ -36,6 +36,12 @@ class CourseController{
     update(req, res, next) {
         Course.updateOne({_id: req.params.id}, req.body)
             .then(()=> res.redirect('/me/stored/courses'))
+            .catch(next)
+    }
+    //[DELETE] /courses/:id
+    destroy(req, res, next){
+        Course.deleteOne({_id: req.params.id})
+            .then(()=> res.redirect('back'))
             .catch(next)
     }
 }
