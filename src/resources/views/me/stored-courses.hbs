@@ -1,5 +1,10 @@
 <div class="mt-4">
     <h4><samp><strong>My Courses</strong></samp></h4>
+    <div>
+      <i class="fas fa-trash"></i>
+      <samp><strong><a href="/me/trash/courses">Trash({{deletedCount}})</a></strong></samp>
+    </div>
+    
     <table class="table mt-4">
   <thead>
     <tr>
@@ -21,6 +26,14 @@
       <td style="text-align: center;">
         <a href="/courses/{{this._id}}/edit" class="btn btn-primary">Sửa</a>
         <a href="/" class="btn btn-danger" data-bs-toggle="modal" data-id="{{this._id}}" data-bs-target="#deleteCourseModal" >Xóa</a>
+      </td>
+    </tr>
+
+    {{else}}
+    <tr>
+      <td colspan="5">
+        Bạn chưa đăng khóa học nào.
+        <a href="/courses/create">Đăng khóa học</a>
       </td>
     </tr>
     {{/each}}

@@ -48,6 +48,10 @@ config header
 ```
 npm i method-override
 ```
+mongoose delete plugin: enables soft deletion of document in MongoDB
+```
+npm i mongoose-delete
+```
 ## NOTE:
 GET: server -> client
 POST: client -> server
