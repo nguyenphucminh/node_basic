@@ -54,8 +54,11 @@ npm i mongoose-delete
 ```
 ## NOTE:
 GET: server -> client
+
 POST: client -> server
+
 PUT,PATCH: update data
+
 DELETE: delete data
 ## FORMAT CODE:
 ```
