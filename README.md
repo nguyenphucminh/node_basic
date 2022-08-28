@@ -83,3 +83,25 @@ End the request-response cycle.
 Call the next middleware function in the stack.
 
 If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function. Otherwise, the request will be left hanging.
+
+```
+app.get('middleware', 
+  function(req, res, next)
+  {
+    if(['normal','vip'].includes(res.params.id))
+    {
+      req.face = 'ABC'
+      return next();
+    }
+    res.status(403).json({message:"access denied"})
+  },
+  function(res, req, next)
+  {
+    res.json({
+      message:"Successful",
+      face: "req.face"
+    })
+  }
+)
+  
+```
