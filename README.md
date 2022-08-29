@@ -108,4 +108,5 @@ app.use(
 )
   
 ```
-end #32
+end #31
+continue #32 - #36 select all
