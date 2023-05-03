@@ -1,8 +1,4 @@
 ## GETTING STARTED:
-install nodejs
-```
-git init
-```
 install expressjs
 ```
 npm i express
